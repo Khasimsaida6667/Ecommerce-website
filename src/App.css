@@ -1,38 +1,128 @@
-.App {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex-grow: 1;
+}
+.hero-section {
+  background-color: #f0f0f0;
+  padding: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero-content p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* Product Section Styles */
+.main-content {
+  display: flex;
+  flex-grow: 1;
+}
+
+.product-section {
+  flex-grow: 1;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+}
+.con{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.filter-toggle {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.filter-toggle select {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.filter-toggle span {
+  margin-right: 1rem;
+}
+
+.filter-btn {
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  border-radius: 50px;
+}
+
+.filter-btn:hover {
+  background-color: #ddd;
+}
+
+.recommendations-dropdown {
+  margin-bottom: 1rem;
+}
+
+.recommendations-dropdown select {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    order: 1;
+  }
+
+  .product-section {
+    order: 2;
+  }
+}
+.products-loader-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
